@@ -1,0 +1,22 @@
+
+:root{
+  --bg:#f6f8f7;--card:#fff;--ink:#10231d;--muted:#6b7b74;--brand:#0e6b4e;
+  --brand2:#07563e;--line:#dfe7e3;--danger:#b42318;--ok:#137333;--shadow:0 12px 35px rgba(16,35,29,.08);
+}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select{font:inherit}button{cursor:pointer;border:0}.app{min-height:100vh}
+.topbar{height:68px;background:#092d22;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 22px;position:sticky;top:0;z-index:20}
+.brand{font-weight:900;letter-spacing:.3px}.brand small{display:block;font-weight:500;opacity:.7;font-size:11px}
+.nav{display:flex;gap:8px}.nav a{color:#d9eee6;text-decoration:none;padding:10px 13px;border-radius:10px}.nav a.active,.nav a:hover{background:#154638}
+.wrap{max-width:1250px;margin:0 auto;padding:22px}.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(330px,.85fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px}
+h1,h2,h3{margin:0 0 8px}.sub{color:var(--muted);margin:0 0 18px}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:13px}.product{padding:16px;border:1px solid var(--line);border-radius:15px;background:white;text-align:left;transition:.15s}.product:hover{transform:translateY(-1px);border-color:#9fc9ba}.product:disabled{opacity:.45;cursor:not-allowed}.foodicon{font-size:30px;margin-bottom:8px}.pname{font-weight:800}.price{font-weight:800;color:var(--brand);margin-top:6px}.stock{font-size:12px;color:var(--muted);margin-top:5px}
+.cart{position:sticky;top:88px}.cartitems{max-height:310px;overflow:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:12px 0}.cartrow{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px solid #edf1ef}.cartrow:last-child{border-bottom:0}.qty{display:flex;align-items:center;gap:7px}.qty button{width:28px;height:28px;border-radius:8px;background:#edf4f1}.totals{display:grid;gap:7px;margin:14px 0}.total{font-size:24px;font-weight:900}.paybuttons{display:grid;grid-template-columns:1fr 1fr;gap:9px}.btn{padding:12px 14px;border-radius:11px;font-weight:800}.primary{background:var(--brand);color:white}.primary:hover{background:var(--brand2)}.secondary{background:#eaf3ef;color:var(--brand2)}.danger{background:#fff0ef;color:var(--danger)}.ghost{background:white;border:1px solid var(--line)}
+.field{display:grid;gap:6px;margin:10px 0}.field label{font-size:13px;font-weight:800}.field input,.field select{padding:11px 12px;border:1px solid #cfdad5;border-radius:10px;outline:none;background:white}.field input:focus{border-color:var(--brand);box-shadow:0 0 0 3px #0e6b4e18}
+.hidden{display:none!important}.toast{position:fixed;right:18px;bottom:18px;background:#10231d;color:white;padding:13px 16px;border-radius:11px;box-shadow:var(--shadow);z-index:100}
+.status{padding:11px 13px;border-radius:10px;font-weight:800;margin:10px 0}.status.pending,.status.payment_processing{background:#fff6d8;color:#8a5a00}.status.completed{background:#e8f7ec;color:#137333}.status.payment_failed,.status.voided,.status.refunded{background:#ffeded;color:#b42318}
+.qrbox{text-align:center;padding:15px;border:1px dashed #b7c8c1;border-radius:15px;margin:12px 0}.qrbox img{width:min(310px,100%);aspect-ratio:1;object-fit:contain;background:white;border-radius:10px}.ref{font-size:12px;color:var(--muted);word-break:break-all}
+.adminlist{display:grid;gap:9px}.adminitem{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:13px;border:1px solid var(--line);border-radius:12px}
+.lock{max-width:430px;margin:80px auto}.notice{padding:12px;background:#fff8e6;border:1px solid #f0dfaa;border-radius:12px;font-size:13px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.cart{position:static}.topbar{height:auto;gap:10px;flex-wrap:wrap;padding:14px 16px}.nav{width:100%;overflow:auto}.wrap{padding:14px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}}

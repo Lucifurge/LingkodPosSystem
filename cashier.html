@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LingkodPOS — Cashier</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<header class="topbar"><div class="brand">LingkodPOS<small>Food Service POS</small></div><nav class="nav"><a class="active" href="cashier.html">Cashier</a><a href="admin.html">Products</a></nav></header>
+<main class="wrap"><div class="grid">
+<section class="card"><h1>New Order</h1><p class="sub">Tap a food item to add it to the order.</p><div id="products" class="products"></div></section>
+<aside class="card cart"><h2>Current Order</h2><p id="empty" class="sub">No items yet.</p><div id="cartitems" class="cartitems"></div>
+<div class="field"><label for="discount">Discount (₱)</label><input id="discount" type="number" min="0" step="0.01" value="0"></div>
+<div class="totals"><div>Subtotal <b id="subtotal">₱0.00</b></div><div>Discount <b id="discountView">₱0.00</b></div><div class="total">Total <span id="total">₱0.00</span></div></div>
+<div id="cashPanel" class="hidden"><div class="field"><label for="cash">Cash received (₱)</label><input id="cash" type="number" min="0" step="0.01" placeholder="0.00"></div><button id="cashBtn" class="btn primary" style="width:100%">Complete Cash Sale</button></div>
+<div class="paybuttons"><button id="showCash" class="btn secondary">Cash</button><button id="gcashBtn" class="btn primary">GCash / QR Ph</button></div>
+<div id="paymentArea"></div></aside></div></main><div id="toast" class="toast hidden"></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="cashier.js"></script></body></html>
